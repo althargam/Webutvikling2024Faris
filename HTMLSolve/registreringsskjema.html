@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeringsskjema</title>
+</head>
+<body>
+    <header>
+        <h1>Registeringsskjema</h1>
+        <nav>
+            <ul>
+                <li><a href=index.html>Hjem</a></li>
+                <li><a href=about.html>Om Meg</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="registreringsskjema.html">Registeringsskjema</a></li>
+            </ul>
+        </nav>
+    </header>
+        <section>
+            <h2>Registeringsskjema</h2>
+            <form method="post">
+
+                <label for="navn">Navn:</label>
+                <input type="text" 
+                name="navn" 
+                placeholder="Ola Nordmann" 
+                id="navn" maxlength="45" 
+                pattern="[A-Za-zæøåÆØÅ ]{2,}" 
+                required>
+
+                <label>
+                    Epost:
+                    <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="eksempel@hiof.no" 
+                    id="epost"
+                    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" 
+                    required>
+                </label>
+                
+                <label>
+                    Passord: 
+                    <input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Skriv 8 siffer passord" 
+                    id="passord" 
+                    minlength="8"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    required>
+                </label>
+
+                <label>
+                    Alder: 
+                    <input 
+                    type="number" 
+                    name="alder" 
+                    min="18" 
+                    max="99" 
+                    id="alder"
+                    placeholder="Skrev alder din i tall" 
+                    required>
+                </label>
+
+                <label>
+                    Telefonnummer: 
+                    <input 
+                    type="tel" 
+                    name="Telefonnummer" 
+                    minlength="8"
+                    id="telefonnummer"
+                    pattern="[0-9]{8,12}" 
+                    required>          
+                  </label>
+
+                  <label for="birthday">
+                    Fødselsdato 
+                    <input 
+                    type="date"
+                    name="birthday"
+                    max="2023-12-31"
+                    id="birthday"
+                    required>
+                  </label>
+
+                  <label>
+                    Mann
+                    <input type="radio" name="valg" required>
+                  </label>
+                  <label>
+                    Kvinne
+                    <input type="radio" name="valg" required>
+                  </label>
+                  <label>
+                    Annet
+                    <input type="radio" name="valg" required>
+                  </label>
+
+                  <label for="country">
+                    Land
+                    <select name="country" id="country" required>
+                        <option value="">Velg ett land</option>
+                        <option value="norge">Norge</option>
+                        <option value="denmark">Denmark</option>
+                        <option value="sverige">Sverige</option>
+                    </select>
+                  </label>
+                  <label for="personvaren">
+                    Personvaren
+                    <input
+                    type="checkbox" 
+                    name="personvaren"
+                    id="personvaren" required>
+                    <input type="submit" value="Send meldning">
+                  </label>
+            </form>
+        </section>
+</body>
+</html>
