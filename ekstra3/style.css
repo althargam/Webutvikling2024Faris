@@ -1,3 +1,11 @@
+/*html {
+    font-size: calc(1em + 1vw);
+}
+*/
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     justify-content: center; /* Center horizontally */
@@ -39,7 +47,7 @@ header {
     padding: 5px;
     margin-left: 10px; /* Add space between the icon and input */
     border: 1px solid #ccc;
-    border-radius: 15px;
+    border-radius: 4px;
     align-items: center; /* Vertically align the icon and input */
 
 }
@@ -210,75 +218,6 @@ header {
     margin-top: 5px; /* Add spacing above price */
 }
 
-/* Katagori */
-.categories {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.categories h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-}
-
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.category {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.category:nth-child(4) {
-    grid-column: span 2;
-}
-
-.category img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.category h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.2rem;
-    text-align: center;
-    text-transform: uppercase;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-}
-
-.category:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-
-
-/* reviews */ 
-
-.review-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    padding: 2rem;
-}
-
-
 /* Footer Styles */
 footer {
     background-color: #f9f9f9; /* Light background for footer */
@@ -353,131 +292,3 @@ footer .sosiale-medier ul li a {
 
 footer .sosiale-medier ul li a:hover {
     color: #007bff; /* Change color on hover */
-}
-
-
-/* Checkout.html */
-
-h1 {
-    display: flex;
-    position: absolute;
-    margin: auto;
-    padding: 50px;
-}
-
-.cart {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 70px;
-}
-
-.cart_information {
-        display: grid;
-        grid-template-columns: 200px 1fr;
-        gap: 20px;
-        margin-bottom: 50px;
-        padding: 10px;
-        border-bottom: 1px solid #eee;
-}
-
-.cart img {
-    width: 100%;
-    height: auto;
-}
-
-.form-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.form-detials {
-    margin-bottom: 15px;
-}
-input[type="text"],
-input[type="email"],
-input[type="number"] 
-input[tpye="email"]
-input[tpye="tel"] {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0;
-    border: 1px solid #ddd;
-}
-
-
-/* product html */
-
-
-.breadcrumb {
-    display: flex;
-    flex-direction: row;
-    padding: 20px 50px;
-    color: #666;
-}
-
-.left-image-product {
-    display: flex;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    padding: 0 50px;
-    margin-bottom: 50px;
-}
-
-.product-gallery {
-    display: flex;
-    grid-template-columns: 100px 1fr;
-    gap: 20px;
-}
-
-.three-small-image img {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.three-small-image img {
-    width: 100%;
-    cursor: pointer;
-}
-
-
-.main-image img {
-    width: 100%;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.right-content-container {
-    padding: 20px;
-}
-
-
-.product-option {
-    width: 100%;
-    padding: 10px;
-    margin: 15px 0;
-}
-
-.btn-product {
-    width: 100%;
-    padding: 15px;
-    background: #000;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.similar-products {
-    display: flex;
-    margin-top: 50px;
-}
-
-.similar.article {
-    display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}

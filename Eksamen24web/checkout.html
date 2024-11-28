@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="grid-container">
     <header>
         <nav class="nav-header">
             <form class="search" title="search-bar">
@@ -34,19 +34,202 @@
 
     <main>
         <h1>Kasse</h1>
-        <section>
+
+        <section class="cart">
             <h2><strong>1.SHOPPINGBAGEN DIN</strong></h2>
-            <article>
-                <img src="https://picsum.photos/180/200">
-                <h2>Product name</h2>
-            </article>
+            <article class="cart_information">
+                <img src="https://picsum.photos/180/200" alt="product name 1">
+                <section class="cart_details">
+                    <h3>Product name</h3>
+                    <p>kr 1999</p>
+                    <p>farge: baige</p>
+                    <section class="quantity">
+                        <label>Størrlese</label>
+                        <select>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                            <label>Antall</label>
+                            <input type="number" value="1" min="1">                   
+                 </section>
+            </article>   
+            
+            <article class="cart_information">
+                <img src="https://picsum.photos/180/200" alt="product name 1">
+                <section class="cart_details">
+                    <h3>Product name</h3>
+                    <p>kr 1999</p>
+                    <p>farge: baige</p>
+                    <section class="quantity">
+                        <label>Størrlese</label>
+                        <select>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                            <label>Antall</label>
+                            <input type="number" value="1" min="1">                   
+                 </section>
+            </article> 
+
+            <article class="cart_information">
+                <img src="https://picsum.photos/180/200" alt="product name 1">
+                <section class="cart_details">
+                    <h3>Product name</h3>
+                    <p>kr 1999</p>
+                    <p>farge: baige</p>
+                    <section class="quantity">
+                        <label>Størrlese</label>
+                        <select>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                            <label>Antall</label>
+                            <input type="number" value="1" min="1">                   
+                 </section>
+            </article>            
         </section>
-        <section></section>
-        <section></section>
-        <section></section>
+
+
+
+        <section class="form-section">
+            <h2><strong>2.Dine opplysninger</strong></h2>
+            <form>
+                <div class="form-detials">
+                    <label for="fname">Fornavn</label>
+                    <input type="text" placeholder="Ole" id="fname" aria-label="first-name" required>
+                    <label for="lname">Etternavn</label>
+                    <input type="text" placeholder="Nordman" id="lname" aria-label="last-name" required>
+                    <label for="saddress">Gateadresse</label>
+                    <input type="text" placeholder="BRA veien 5" id="saddress" aria-label="street-address" required>
+                    <label for="zipcode">Postadresse</label>
+                    <input type="number" placeholder="1728" id="zipcode" aria-label="zipcode" pattern="" required>
+                    <label for="postof">Poststed</label>
+                    <input type="text" placeholder="Halden" id="postof" aria-label="post-office" required>
+                    <br>
+                    <label for="e-mail">E-post</label>
+                    <input type="email" placeholder="olenordman@hiof.no" id="e-mail" aria-label="e-mail" pattern="" required>
+                    <label for="phone">Telefon</label>
+                    <input type="tel" placeholder="+47 999 88 777" id="phone" aria-label="Telefon" pattern="" required>
+                    <button type="submit">Lagre</button>
+                    <a href="#">Avbryt</a>
+                </div>
+            </form>
+        </section>
+
+
+        <section class="shipping">
+            <h2><strong>3.Levering</strong></h2>
+            <form>
+                <label>
+                    <input type="radio" name="shipping-1">
+                    Express Hjemlevering 
+                    (1-3 Virkedager)
+                </label>
+                <label>
+                    <input type="radio" name="shipping-2">
+                    Standard Hjemlevering (3-5 Virkedager)
+                </label>
+                <label>
+                    <input type="radio" name="shipping-3">
+                    Standard Hjemlevering
+                </label>
+            </form>
+        </section>
+
+
+        <section class="payment">
+            <h2><strong>4.BETALING</strong></h2>
+            <h3>BETAL MED KORT</h3>
+            <form>
+                <label for="card-number">Kortnummer
+                    <input type="number" placeholder="3443 2*** 1234" name="card-number" id="card-number" pattern="" required>
+                </label>
+                <label for="expiration-date">Utløpsdato
+                    <input type="date" placeholder="mm/dd/yyyy" name="expiration-date" id="expiration-date" pattern="" required>
+                </label>
+                <label for="cvc-cvv">CVC-CVV</label>
+                <input type="number" placeholder="CVC-CVV" maxlength="4" name="cvc-cvv" id="cvc-cvv" pattern="" required>
+            </form>
+            <section>
+                <form id="payment">
+                    <p>Å betale inkl. mva.</p>
+                    <p class="price">1 199 kr</p>
+                    <button type="submit">Fullfør kjøp</button>
+                    <p>
+                      Du bekrefter herved at opplysningene og dokumentene du har opgitt
+                      er korrekte og fullstendige. Leverandøren forbeholder seg retten
+                      til å heve eller avlutte avtaleforholdet dersom det foreligger
+                      uriktige eller ufullstendige opplysninger
+                    </p>
+                    <input
+                      type="checkbox"
+                      id="nyhetsbrev"
+                      name="nyhetsbrev"
+                      value="ja"
+                    />
+                    <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg.</label
+                    ><br />
+                    <input
+                      type="checkbox"
+                      id="tekstmeldinger"
+                      name="tekstmeldinger"
+                      value="ja"
+                    />
+                    <label for="tekstmeldinger"
+                      >Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.</label
+                    ><br />
+                  </form>
+            </section>
+        </section>
+    
     </main>
 
-    <footer></footer>
+    <footer>            
+        <a href="#"><h3>Logo</h3></a>
+            <p>Twest testte</p>
+            <section>Kontakt
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <strong>Adresse:</strong> Oslo
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <strong>Telefon</strong> 44 44 44 44
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <strong>E-post:</strong> Halden@hiof.no
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <strong>Åpeningstider:</strong> 08:00 - 16:00
+                    </li>
+                </ul>
+            </section>
+            <section>snarveier
+                <ul>
+                    <li><a href="#">Produkter</a></li>
+                    <li><a href="#">kategorier</a></li>
+                    <li><a href="#">Kontakt oss</a></li>
+                </ul>
+            </section>
+            <section>Sosiale medier
+                <ul>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
+                </ul>
+            </section>
+        </div>
+        </footer>
     
 </body>
 </html>
